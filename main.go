@@ -111,7 +111,7 @@ func main() {
 					return
 				}
 
-				cmd := exec.Command(parts[0], parts[1:]...)
+				cmd := exec.Command("sh", "-c", resp.Text())
 				cmd.Stdout = os.Stdout
 				cmd.Stderr = os.Stderr
 
